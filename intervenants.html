@@ -15,22 +15,210 @@
 <body>
     
 
-     <!-- La structure de l'html  -->
-    <header>
+    <header  class="navbar" id="navbar">
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span>AfriConnect Summit 2026</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="programme.html" class="nav-link">Programme</a></li>
+                <li><a href="intervenants.html" class="nav-link active">Intervenants</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+        </nav>
 
     </header>
 
 
     <main>
+          <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <div class="hero-overlay">
+                <h1>Nos Intervenants</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Intervenants</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECTION INTERVENANTS -->
+        <section class="speakers-section">
+            <div class="container">
+                <h2 class="section-title">Filtrer par Thématique</h2>
+                
+                <!-- BOUTONS DE FILTRE -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="bi bi-funnel"></i> Tous
+                    </button>
+                    <button class="filter-btn" data-filter="ia">
+                        <i class="bi bi-cpu"></i> IA & Tech
+                    </button>
+                    <button class="filter-btn" data-filter="business">
+                        <i class="bi bi-briefcase"></i> Business
+                    </button>
+                    <button class="filter-btn" data-filter="design">
+                        <i class="bi bi-palette"></i> Design
+                    </button>
+                    <button class="filter-btn" data-filter="data">
+                        <i class="bi bi-graph-up"></i> Data
+                    </button>
+                </div>
+
+                <!-- GRILLE D'INTERVENANTS -->
+                <div class="speakers-grid-full">
+                    <!-- Intervenant 1 -->
+                    <article class="speaker-card-full" data-category="ia">
+                        <img src="images/INTERVENANT1.jpg" alt="Awa Coly">
+                        <div class="speaker-info">
+                            <h3>Awa Coly</h3>
+                            <p class="speaker-specialty">IA & Machine Learning</p>
+                            <p class="speaker-bio">PDG d'AfriTech Innovations, pionnière en intelligence artificielle appliquée au secteur financier africain.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Senegal</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 2 -->
+                    <article class="speaker-card-full" data-category="ia">
+                        <img src="images/INTERVENANT2.jpg" alt="Mouhamed Coly">
+                        <div class="speaker-info">
+                            <h3>Mouhamed Coly</h3>
+                            <p class="speaker-specialty">IA & Tech</p>
+                            <p class="speaker-bio">Directeur IA chez TechHub Africa, expert en deep learning et applications pratiques.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Italie</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 3 -->
+                    <article class="speaker-card-full" data-category="business">
+                        <img src="images/INTERVENANT3.jpg" alt="Dieynaba Coly">
+                        <div class="speaker-info">
+                            <h3>Dieynaba Coly</h3>
+                            <p class="speaker-specialty">Business & Entrepreneuriat</p>
+                            <p class="speaker-bio">Fondatrice de StartupHub Afrique, mentor d'entrepreneurs et investisseuse en capital-risque.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Côte d'Ivoire</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 4 -->
+                    <article class="speaker-card-full" data-category="data">
+                        <img src="images/INTERVENANT4.jpg" alt="Sana Coly">
+                        <div class="speaker-info">
+                            <h3>Sana Coly</h3>
+                            <p class="speaker-specialty">Data & Cloud</p>
+                            <p class="speaker-bio">Expert Cloud & DevOps, spécialiste en architecture de données distribuées.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> France</p>
+                        </div>
+                    </article>
+                    <!-- Intervenant 5 -->
+                     <article class="speaker-card-full"data-category="design"></article>
+                     <img src="images/Image1.jpg" alt="Amy Diédhiou">
+                      <div class="speaker-info">
+                            <h3>Fatima Traore</h3>
+                            <p class="speaker-specialty">Design & UX</p>
+                            <p class="speaker-bio">Directrice Design chez CreativeStudio, pionnière du design inclusif en Afrique.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Ziguinchor</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 6 -->
+                    <article class="speaker-card-full" data-category="ia">
+                        <img src="images/Image2.jpg" alt="Mada Coly">
+                        <div class="speaker-info">
+                            <h3>Mada Coly</h3>
+                            <p class="speaker-specialty">IA & Tech</p>
+                            <p class="speaker-bio">Chercheur en IA et fondateur de plusieurs startups technologiques.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Japon</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 7 -->
+                    <article class="speaker-card-full" data-category="business">
+                        <img src="images/Image3.jpg" alt="Sidate Coly">
+                        <div class="speaker-info">
+                            <h3>Sidate Coly</h3>
+                            <p class="speaker-specialty">Business & Fintech</p>
+                            <p class="speaker-bio">PDG de FinTech Africa, révolutionnaire des services financiers numériques.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Amérique</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 8 -->
+                    <article class="speaker-card-full" data-category="data">
+                        <img src="images/Image4.jpg" alt="Rayad Coly">
+                        <div class="speaker-info">
+                            <h3>Rayad Coly</h3>
+                            <p class="speaker-specialty">Data Science</p>
+                            <p class="speaker-bio">Data scientist et consultant en analytics, expert en big data africain.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> France</p>
+                        </div>
+                    </article>
+
+                    <!-- Intervenant 9 -->
+                    <article class="speaker-card-full" data-category="design">
+                        <img src="images/Image5.jpg" alt="Adama Coly">
+                        <div class="speaker-info">
+                            <h3>Adama Coly</h3>
+                            <p class="speaker-specialty">Design & Branding</p>
+                            <p class="speaker-bio">Directrice créative, spécialiste en branding de startups technologiques africaines.</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>    
 
     </main>
-    <section>
-
-    </section>
-    <!-- Pied de page  -->
-    <footer>
-        
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <p>AfriConnect Summit est la plus grande conférence tech panafricaine réunissant innovateurs et leaders du continent.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </div>
     </footer>
+    
+   
     <script src="js/main.js"></script>
 </body>
 </html>

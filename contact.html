@@ -13,24 +13,272 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-
-     <!-- La structure de l'html  -->
-    <header>
-
+     <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span>AfriConnect Summit 2026</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="programme.html" class="nav-link">Programme</a></li>
+                <li><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+        </nav>
     </header>
 
-
     <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <div class="hero-overlay">
+                <h1>Contact & Inscription</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </section>
 
+        <!-- SECTION FORMULAIRE -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- FORMULAIRE -->
+                    <div class="form-column">
+                        <h2>Formulaire d'Inscription</h2>
+                        <form id="registrationForm" class="registration-form">
+                            <!-- Nom Complet -->
+                            <div class="form-group">
+                                <label for="fullname">Nom Complet *</label>
+                                <input type="text" id="fullname" name="fullname" required aria-label="Nom complet">
+                                <span class="error-message" id="fullname-error"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-label="Adresse email">
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                             <!-- Téléphone -->
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required aria-label="Numéro de téléphone">
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+
+                            <!-- Type de Participation -->
+                            <div class="form-group">
+                                <label for="participation">Type de Participation *</label>
+                                <select id="participation" name="participation" required aria-label="Type de participation">
+                                    <option value="">-- Sélectionnez une option --</option>
+                                    <option value="participant">Participant</option>
+                                    <option value="speaker">Conférencier</option>
+                                    <option value="sponsor">Sponsor</option>
+                                    <option value="media">Média</option>
+                                </select>
+                                <span class="error-message" id="participation-error"></span>
+                            </div>
+
+                            <!-- Pays -->
+                            <div class="form-group">
+                                <label for="country">Pays Africain *</label>
+                                <select id="country" name="country" required aria-label="Pays africain">
+                                    <option value="">-- Sélectionnez un pays --</option>
+                                    <option value="algeria">Algérie</option>
+                                    <option value="cameroon">Cameroun</option>
+                                    <option value="egypt">Égypte</option>
+                                    <option value="ethiopia">Éthiopie</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="ivory_coast">Côte d'Ivoire</option>
+                                    <option value="kenya">Kenya</option>
+                                    <option value="mali">Mali</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="senegal">Sénégal</option>
+                                    <option value="south_africa">Afrique du Sud</option>
+                                    <option value="uganda">Ouganda</option>
+                                </select>
+                                <span class="error-message" id="country-error"></span>
+                            </div>
+
+                            <!-- Message/Motivation -->
+                            <div class="form-group">
+                                <label for="message">Message / Motivation *</label>
+                                <textarea id="message" name="message" rows="5" required aria-label="Message ou motivation"></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <!-- Bouton Envoi -->
+                            <button type="submit" class="btn btn-primary form-submit">
+                                <i class="bi bi-send"></i> S'inscrire
+                            </button>
+                            <!-- Message de Succès -->
+                            <div id="successMessage" class="success-message" style="display: none;">
+                                <i class="bi bi-check-circle"></i>
+                                <p>Merci pour votre inscription ! Nous vous contacterons bientôt.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- INFORMATIONS -->
+                    <div class="info-column">
+                        <h2>Informations Pratiques</h2>
+                        
+                        <div class="info-card">
+                            <i class="bi bi-geo-alt"></i>
+                            <h3>Lieu</h3>
+                            <p>Centre de Conférences International<br>Dakar, Sénégal</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="bi bi-calendar-event"></i>
+                            <h3>Dates</h3>
+                            <p>15 - 17 Novembre 2026</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="bi bi-clock"></i>
+                            <h3>Horaires</h3>
+                            <p>09:00 - 17:00 (chaque jour)</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="bi bi-telephone"></i>
+                            <h3>Téléphone</h3>
+                            <p>+221 33 123 45 67</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="bi bi-envelope"></i>
+                            <h3>Email</h3>
+                            <p>info@africonnectsummit.com</p>
+                        </div>
+
+                        <!-- Google Maps -->
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.6843835093316!2d-17.057389!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f6e1c6c6c6d%3A0x1c6c6c6c6c6c6c6c!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation d'AfriConnect Summit à Dakar"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- SECTION FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Questions Fréquemment Posées</h2>
+                
+                <div class="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-checkbox">
+                        <label for="faq1" class="faq-question">
+                            <span>Quel est le coût d'inscription à la conférence ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="faq-answer">
+                            <p>L'inscription standard coûte 50 000 FCFA pour les trois jours. Des tarifs réduits sont disponibles pour les étudiants (25 000 FCFA) et les groupes de 5 personnes ou plus (40 000 FCFA par personne).</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-checkbox">
+                        <label for="faq2" class="faq-question">
+                            <span>Comment puis-je accéder aux enregistrements des sessions ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="faq-answer">
+                            <p>Tous les participants recevront un accès à la plateforme de streaming en ligne où les enregistrements seront disponibles pendant 6 mois après la conférence. Un lien d'accès sera envoyé par email après votre inscription.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq3" class="faq-checkbox">
+                        <label for="faq3" class="faq-question">
+                            <span>Y a-t-il un hébergement disponible pour les participants ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="faq-answer">
+                            <p>Nous avons des partenariats avec plusieurs hôtels à Dakar offrant des tarifs préférentiels aux participants. Une liste complète des hôtels recommandés sera envoyée avec votre confirmation d'inscription.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq4" class="faq-checkbox">
+                        <label for="faq4" class="faq-question">
+                            <span>Puis-je modifier ou annuler mon inscription ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez modifier votre inscription jusqu'à 7 jours avant la conférence. Les annulations effectuées plus de 14 jours avant la conférence recevront un remboursement complet. Après cette date, aucun remboursement n'est possible.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq5" class="faq-checkbox">
+                        <label for="faq5" class="faq-question">
+                            <span>Comment puis-je devenir sponsor ou partenaire ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="faq-answer">
+                            <p>Nous recherchons toujours des sponsors et partenaires. Veuillez contacter notre équipe de sponsoring à sponsors@africonnectsummit.com pour discuter des opportunités de partenariat et des packages disponibles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <section>
 
-    </section>
-    <!-- Pied de page  -->
-    <footer>
-        
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <p>AfriConnect Summit est la plus grande conférence tech panafricaine réunissant innovateurs et leaders du continent.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </div>
     </footer>
+ 
     <script src="js/main.js"></script>
 </body>
 </html>

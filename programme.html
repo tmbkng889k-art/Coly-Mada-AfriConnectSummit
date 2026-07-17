@@ -11,23 +11,275 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-     <!-- La structure de l'html  -->
-    <header>
-
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span>AfriConnect Summit 2026</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="programme.html" class="nav-link active">Programme</a></li>
+                <li><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+        </nav>
     </header>
-
-
     <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <div class="hero-overlay">
+                <h1>Programme</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <span>Programme</span>
+                </nav>
+            </div>
+        </section>
 
+        <!-- SECTION PROGRAMME -->
+        <section class="programme-section">
+            <div class="container">
+                <h2 class="section-title">Planning des 3 Jours</h2>
+                
+                <!-- ONGLETS -->
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="day1">
+                        <i class="bi bi-calendar-event"></i> Jour 1
+                    </button>
+                    <button class="tab-button" data-tab="day2">
+                        <i class="bi bi-calendar-event"></i> Jour 2
+                    </button>
+                    <button class="tab-button" data-tab="day3">
+                        <i class="bi bi-calendar-event"></i> Jour 3
+                    </button>
+                </div>
+
+                <!-- CONTENU JOUR 1 -->
+                <div class="tab-content active" id="day1">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-1">
+                                <td>09:00 - 10:00</td>
+                                <td>Keynote d'ouverture : L'Avenir du Tech en Afrique</td>
+                                <td>Awa Coly</td>
+                                <td>Amphithéâtre Principal</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>10:15 - 11:15</td>
+                                <td>Workshop : Intelligence Artificielle & Machine Learning</td>
+                                <td>Mouhamed Coly</td>
+                                <td>Salle A</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>11:30 - 12:30</td>
+                                <td>Panel Discussion : Startups Africaines</td>
+                                <td>Dieynaba Coly</td>
+                                <td>Salle B</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>13:00 - 14:00</td>
+                                <td>Pause Déjeuner</td>
+                                <td>-</td>
+                                <td>Cafétéria</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>14:00 - 15:00</td>
+                                <td>Atelier : Cloud Computing & DevOps</td>
+                                <td>Thierry Diallo</td>
+                                <td>Salle C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- CONTENU JOUR 2 -->
+                <div class="tab-content" id="day2">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-1">
+                                <td>09:00 - 10:00</td>
+                                <td>Keynote : Blockchain & Web3 en Afrique</td>
+                                <td>Awa Coly</td>
+                                <td>Amphithéâtre Principal</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>10:15 - 11:15</td>
+                                <td>Workshop : Cybersécurité & Protection des Données</td>
+                                <td>Mouhamed Coly</td>
+                                <td>Salle A</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>11:30 - 12:30</td>
+                                <td>Pitch de Startups : Compétition Innovation</td>
+                                <td>Dieynaba Coly</td>
+                                <td>Salle B</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>13:00 - 14:00</td>
+                                <td>Pause Déjeuner</td>
+                                <td>-</td>
+                                <td>Cafétéria</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>14:00 - 15:00</td>
+                                <td>Atelier : Développement Mobile & React Native</td>
+                                <td>Sana Coly</td>
+                                <td>Salle C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- CONTENU JOUR 3 -->
+                <div class="tab-content" id="day3">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-1">
+                                <td>09:00 - 10:00</td>
+                                <td>Keynote : Entrepreneuriat & Financement</td>
+                                <td>Dieynaba coly</td>
+                                <td>Amphithéâtre Principal</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>10:15 - 11:15</td>
+                                <td>Workshop : Design UX/UI pour Applications Mobiles</td>
+                                <td>Mouhmed Coly</td>
+                                <td>Salle A</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>11:30 - 12:30</td>
+                                <td>Panel : Opportunités d'Emploi & Carrière Tech</td>
+                                <td>Sana Coly</td>
+                                <td>Salle B</td>
+                            </tr>
+                            <tr class="row-2">
+                                <td>13:00 - 14:00</td>
+                                <td>Pause Déjeuner</td>
+                                <td>-</td>
+                                <td>Cafétéria</td>
+                            </tr>
+                            <tr class="row-1">
+                                <td>14:00 - 15:30</td>
+                                <td>Cérémonie de Clôture & Networking</td>
+                                <td>Tous les Intervenants</td>
+                                <td>Amphithéâtre Principal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION THÉMATIQUES -->
+        <section class="themes-section">
+            <div class="container">
+                <h2 class="section-title">Thématiques Principales</h2>
+                <div class="themes-grid">
+                    <article class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Explorez les applications de l'IA et du machine learning pour transformer les industries africaines.</p>
+                    </article>
+                    <article class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="bi bi-rocket"></i>
+                        </div>
+                        <h3>Entrepreneuriat & Startups</h3>
+                        <p>Découvrez comment lancer et développer une startup technologique réussie en Afrique.</p>
+                    </article>
+                    <article class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h3>Cybersécurité</h3>
+                        <p>Protégez vos données et systèmes avec les meilleures pratiques de sécurité informatique.</p>
+                    </article>
+                    <article class="theme-card fade-in">
+                        <div class="theme-icon">
+                            <i class="bi bi-cloud-check"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Maîtrisez les technologies cloud et les pratiques DevOps pour une infrastructure scalable.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
-    <section>
 
-    </section>
-    <!-- Pied de page  -->
-    <footer>
-        
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <p>AfriConnect Summit est la plus grande conférence tech panafricaine réunissant innovateurs et leaders du continent.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
-    
